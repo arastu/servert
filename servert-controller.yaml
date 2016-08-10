@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: servert
+  labels:
+    name: servert
+spec:
+  replicas: 3
+  selector:
+    name: servert
+  template:
+    metadata:
+      labels:
+        name: servert
+    spec:
+      containers:
+      - name: servert
+        image: quay.io/arastu/servert
+        ports:
+        - containerPort: 8080

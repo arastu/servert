@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servert-pod
+spec:
+  containers:
+  - name: servert-pod
+    image: quay.io/arastu/servert
+    ports:
+    - containerPort: 8080

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: servert
+  labels:
+    name: servert
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    name: servert
